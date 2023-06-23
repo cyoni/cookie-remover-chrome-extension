@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Remover",
+  "description": "Remove cookies with two clicks",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["*://*/*"],
+  "permissions": ["cookies", "tabs"]
+}
