@@ -19,10 +19,3 @@ chrome.runtime.onMessage.addListener(async function (
       break
   }
 })
-
-
-chrome.tabs.onActivated.addListener(
-  ()=>{
-    console.log("updated")
-  }
-)
